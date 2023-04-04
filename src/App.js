@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Routes from './Routes';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Switch } from 'react-router-dom';
 
 import whiskey from './images/whiskey.jpg';
 import duke from './images/duke.jpg';
@@ -53,11 +53,14 @@ App.defaultProps = {
   ]
 }
 
-function App() {
+
+function App({dogs}) {
+
+
   return (
     <div className="App">
         <BrowserRouter>
-          <Routes dogs={App.defaultProps.dogs}/>
+          <Routes dogs={dogs} />
         </BrowserRouter>
     </div>
   );

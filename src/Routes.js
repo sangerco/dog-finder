@@ -4,6 +4,7 @@ import DogList from './DogList';
 import DogDetails from './DogDetails';
 
 const Routes = ({dogs}) => {
+    console.log('rendered')
     return (
         <Switch>
             <Route exact path='/dogs'>
